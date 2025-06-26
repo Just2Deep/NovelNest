@@ -1,0 +1,9 @@
+[project]
+name = "novelnest"
+version = "0.1.0"
+description = "A python backend for NovelNest, a web application for managing and reading novels."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.115.14",
+]
