@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from schemas import Book
+from src.books.schemas import Book
 
 _books = [
     {
@@ -42,5 +42,4 @@ _books = [
     
 ]
 
-books = [Book(**book) for book in _books]  # Convert dicts to Book instances
 books = [Book(**book) for book in _books]  # Convert dicts to Book instances
