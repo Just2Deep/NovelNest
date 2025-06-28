@@ -1,6 +1,6 @@
 # Novel Nest
 
-A modern and intuitive book tracking application built with Python and FastAPI.
+A modern and intuitive book review web service built with Python and FastAPI.
 
 ## Features
 
@@ -31,7 +31,7 @@ A modern and intuitive book tracking application built with Python and FastAPI.
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/NovelNest.git
+    git clone https://github.com/Just2Deep/NovelNest.git
     cd NovelNest
     ```
 
@@ -71,20 +71,26 @@ A modern and intuitive book tracking application built with Python and FastAPI.
 
 ## Project Structure
 
-    ```
-    NovelNest/
-    ├── app/               # FastAPI application code
-    │   ├── main.py        # FastAPI entrypoint
-    │   ├── models.py      # Database models
-    │   ├── schemas.py     # Pydantic schemas
-    │   ├── crud.py        # CRUD operations
-    │   └── ...
-    ├── tests/             # Test suites
-    ├── scripts/           # Utility scripts (e.g., db init)
-    ├── requirements.txt   # Python dependencies
-    ├── alembic/           # Database migrations (if using Alembic)
-    └── README.md
-    ```
+```
+NovelNest/
+├── src/
+│   ├── main.py           # FastAPI application entrypoint
+│   ├── api.py            # Registers API routers
+│   ├── config.py         # Application settings
+│   ├── books/            # Book-related routes, schemas, and data
+│   │   ├── routes.py     # Book API endpoints
+│   │   ├── schemas.py    # Pydantic models for books
+│   │   ├── book_data.py  # In-memory book data
+│   │   └── __init__.py
+│   ├── database/         # Database connection and session
+│   │   ├── core.py       # Database engine/session setup
+│   │   └── __init__.py
+│   └── __init__.py
+├── .env                  # Environment variables
+├── requirements.txt       # Python dependencies
+├── README.md
+└── ... (other config, venv, etc.)
+```
 
 ## API Documentation
 
