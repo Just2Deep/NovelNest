@@ -14,7 +14,7 @@ class Book(SQLModel, table=True):
     title: str = Field(max_length=200)
     author: str = Field(max_length=100)
     description: str = Field(max_length=1000)
-    published_year: datetime = Field(sa_column=Column(pg.DATE, nullable=False))
+    published_date: datetime = Field(sa_column=Column(pg.DATE, nullable=False))
     genre: str = Field(max_length=50)
     pages: int = Field(ge=1)
     created_at: datetime = Field(
@@ -34,4 +34,4 @@ class Book(SQLModel, table=True):
     )
 
     def __repr__(self):
-        return f"Book(id={self.id}, title='{self.title}', author='{self.author}', published_year={self.published_year})"
+        return f"Book(id={self.id}, title='{self.title}', author='{self.author}', published_date={self.published_date})"
